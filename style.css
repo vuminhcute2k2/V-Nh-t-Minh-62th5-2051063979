@@ -1,0 +1,117 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar.navbar-expand-sm.navbar-dark.bg-dark{
+    padding: 0;
+    margin-bottom: 0;
+}
+.menu{
+    border-top: 7px solid #cf2e2e;
+    background: #484848; /*tô màu cho menu cha*/
+    text-align: center;
+}
+nav ul{
+    display: flex;
+}
+nav> ul li{
+    list-style: none; /* bỏ dấu chấm mặc định của li */
+    /* kẻ đường bên trái và bên phải của li */
+    border-right: 1px solid #ccc;
+    border-left:1px solid #333;
+}
+nav> ul li a{
+    display: block;
+    padding: 0 25px;
+    line-height: 50px;
+    color: #f1f2f3;
+    text-decoration: none;
+}
+nav ul li:first-child {
+    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
+}
+nav> ul li:first-child a{
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+/* Khi hover đến li, tô màu cho thẻ a */
+nav ul li:hover>a{
+    background: rgb(90, 197, 221);
+    /* opacity: .7; */
+    color: white;
+}
+/*menu con*/
+/*Ẩn các menu con cấp 1,2,3*/
+nav li ul{
+    display: none;
+    min-width: 350px;
+    position: absolute;
+    /* để thanh menu hiện lên trên hình ảnh  */
+    z-index: 2;
+}
+nav li>ul li{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: #999;
+    text-align: left;
+}
+nav li>ul li:first-child a{
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+nav li>ul li:last-child {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+nav li>ul li:last-child a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+/*khi hover thì hiện menu con*/
+nav  li:hover > ul{
+    display:  block;
+}
+/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
+nav > ul li > ul li >ul{
+    margin-left:310px;
+    margin-top: -50px;
+}
+#carouselExampleIndicators.carousel.slide{
+    margin-top: 4px;
+    height: -50px;
+    border-top: 7px solid #cf2e2e;
+    border-bottom: 7px solid #cf2e2e;
+}
+.cardtintuc{
+    /* can chinh giua card tin tuc */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#card-1.card{
+    margin-left: 20px;
+}
+.linktintuc{
+    background-color: #cf2e2e;
+}
+.linksukien{
+    background-color: #cf2e2e;
+}
+body{
+    margin-left:auto ;
+    margin-right: auto;
+}
+#ct-daotao{
+    line-height: 1.6;
+    font-family: Arial !important;
+    font-size: 100%;
+    color: #0a0a0a;
+    box-sizing: border-box;
+    position: relative;
+    padding: 0 15px 15px;
+    width: 100%;
+    max-width: 50%;
+    flex-basis: 50%;
+    padding-bottom: 0 !important;
+}
